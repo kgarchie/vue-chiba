@@ -8,9 +8,7 @@
       <li class="card" v-for="recipe in featuredRecipes" v-bind:key="recipe.id">
         <h3>{{recipe.title}}</h3>
         <figure class="image">
-          <img
-            v-bind:src="recipe.get_main_image_url"
-            alt="">
+          <img v-bind:src="recipe.get_main_image_url" alt="">
           <figcaption>
             <div class="details">
               <div class="serves">
@@ -23,7 +21,9 @@
               </div>
               <div class="curator">
                 <p>By:</p>
-                <p v-for="detail in recipe.get_authors" v-bind:key="detail.slugs"><span v-for="author in detail.names">{{author}}</span> <span v-for="slug in detail.slugs">@{{slug}}</span></p>
+                <p v-for="detail in recipe.get_authors" v-bind:key="detail.slugs"><span
+                    v-for="author in detail.names">{{author}}</span> <span v-for="slug in detail.slugs">@{{slug}}</span>
+                </p>
               </div>
             </div>
           </figcaption>
