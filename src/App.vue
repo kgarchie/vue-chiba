@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <nav class="nav">
       <div class="start">
         <RouterLink to="/" class="start-linked link">
-          <img src="./assets/images/logo - Icon.png" alt="" class="icon-logo-img">
+          <img src="./assets/images/logo.png" alt="" class="icon-logo-img">
           <span class="word-logo">Chiba</span>
         </RouterLink>
       </div>
