@@ -6,7 +6,7 @@
   <main>
     <ul class="list-container">
       <li class="card" v-for="recipe in featuredRecipes" v-bind:key="recipe.id">
-        <h3>{{recipe.title}}</h3>
+        <h3 class="card-header">{{recipe.title}}</h3>
         <figure class="image">
           <img v-bind:src="recipe.get_main_image_url" alt="">
           <figcaption>
@@ -36,6 +36,7 @@
 <style scoped>
 .list-container {
   width: 100vw;
+  margin-top: 50px;
 
   height: 500px;
   display: flex;
@@ -50,14 +51,31 @@
   width: 500px;
   height: 400px;
   border-radius: 50px;
+  
+  isolation: isolate;
 
   position: relative;
+  
 }
 
-.card h3 {
+.card-header {
   position: absolute;
   top: 50px;
   left: 50px;
+
+  z-index: 4;
+  color: var(--background-color);
+  width: calc(100% - 100px);
+  height: 50px;
+  background-color: black;
+  
+  border-radius: 50px;
+  text-align: center;
+  padding: 0.7rem;
+  line-height: normal;
+  opacity: 0.5;
+  
+  backdrop-filter: blur(100px);
 }
 
 .image {
@@ -70,6 +88,9 @@
   height: 400px;
 
   border-radius: 50px;
+  z-index: 1;
+  
+  
 
   object-fit: cover;
 }
@@ -82,6 +103,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  z-index: 2;
 
   border-radius: 50px;
 }

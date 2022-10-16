@@ -136,6 +136,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 footer {
   width: 100vw;
+  margin-top: 300px;
   height: 200px;
   background-color: var(--nav-background);
   color: white;
