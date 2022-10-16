@@ -8,7 +8,7 @@ import router from './router'
 import './assets/main.css'
 
 
-axios.defaults.baseURL = 'http://127.0.0.1:8000'
+axios.defaults.baseURL = 'http://bosireallan.pythonanywhere.com'
 const app = createApp(App)
 
 app.use(createPinia())
